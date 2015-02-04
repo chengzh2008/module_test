@@ -9,7 +9,7 @@ describe("greetObject test", function() {
     });
 
     it("should greet without input name", function() {
-        expect(greetObject.greet()).to.eql("hello there");
+        expect(greetObject.greet()).to.eql("hello");
     });
 
     it("should greet with a command line input", function() {
