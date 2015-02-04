@@ -1,6 +1,6 @@
 "use strict";
 
-var myApp = require('../greet');
+var myApp = require('../lib/greet');
 var expect = require('chai').expect;
 
 describe('myApp from greet.js', function(){
@@ -24,6 +24,6 @@ describe('myApp from greet.js', function(){
     // restore the process.argv
     after(function(){
       process.argv = arg_cache;
-    })
-  })
-})
+    });
+  });
+});
