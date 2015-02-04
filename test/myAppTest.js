@@ -14,7 +14,6 @@ describe('myApp from greet.js', function () {
         before(function () {
             // cache the current process.argv
             arg_cache = process.argv;
-
             process.argv[2] = "somename";
         });
 
