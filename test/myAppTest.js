@@ -9,16 +9,17 @@ describe('myApp from greet.js', function () {
     });
 
     it('should grab input from process.argv', function () {
-        var arg_cache,
-            somename = 'cat';
+        var arg_cache;
+
         before(function () {
             // cache the current process.argv
             arg_cache = process.argv;
-            process.argv[2] = somename;
+
+            process.argv[2] = "somename";
         });
 
-        it('should grab soemname from process.argv', function () {
-            expect(myApp()).to.eql("hello " + somename);
+        it('should grab somename from process.argv', function () {
+            expect(myApp()).to.eql("hello somename");
         });
 
         // restore the process.argv
