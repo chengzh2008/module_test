@@ -11,7 +11,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
             scripts: {
-                files: ['lib/*.js', 'Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'index.js', '.jscsrc'],
+                files: ['lib/*.js', 'Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'index.js', '.jscsrc', '.jshintrc'],
                 tasks: ['default'],
                 options: {
                     spawn: true
@@ -21,13 +21,7 @@ module.exports = function (grunt) {
         jshint: {
             dev: {
                 options: {
-                    node: true,
-                    globals: {
-                        describe: true,
-                        it: true,
-                        before: true,
-                        after: true
-                    }
+                    jshintrc: '.jshintrc'
                 },
                 src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'index.js']
             }
